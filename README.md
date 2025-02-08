@@ -1,14 +1,13 @@
-# 📊 Advanced_SQL_Sales_Analytics
+# Advanced SQL Sales Analytics
 
-
-## 🔍 Overview
+## Overview
 This project presents an in-depth analysis of an e-commerce dataset (`df_orders`) using SQL. The queries extract crucial business insights, including top-selling products, regional sales distribution, revenue trends, and customer segmentation. The analysis aids in strategic decision-making for inventory management, pricing, and marketing.
 
 ---
 
-## 🏆 Key Analyses & Insights
+## Key Analyses & Insights
 
-### 1️⃣ Top 10 Revenue-Generating Products
+### 1. Top 10 Revenue-Generating Products
 - **Objective:** Identify products generating the highest revenue.
 - **Query Highlights:**
   - Aggregates total `sale_price` for each `product_id`.
@@ -17,7 +16,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 2️⃣ Top 5 Best-Selling Products in Each Region
+### 2. Top 5 Best-Selling Products in Each Region
 - **Objective:** Determine the highest-selling products in different regions.
 - **Query Highlights:**
   - Uses `ROW_NUMBER()` to rank products within each region.
@@ -26,7 +25,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 3️⃣ Month-over-Month Sales Growth (2022 vs. 2023)
+### 3. Month-over-Month Sales Growth (2022 vs. 2023)
 - **Objective:** Compare monthly revenue across two years to identify growth trends.
 - **Query Highlights:**
   - Extracts `year(order_date)` and `month(order_date)`.
@@ -35,7 +34,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 4️⃣ Best-Selling Month for Each Product Category
+### 4. Best-Selling Month for Each Product Category
 - **Objective:** Identify which month saw the highest sales for each category.
 - **Query Highlights:**
   - Uses `FORMAT(order_date, 'yyyyMM')` to group by month.
@@ -44,7 +43,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 5️⃣ Sub-Category with the Highest Profit Growth (2023 vs. 2022)
+### 5. Sub-Category with the Highest Profit Growth (2023 vs. 2022)
 - **Objective:** Identify the sub-category with the highest revenue increase.
 - **Query Highlights:**
   - Aggregates `sale_price` for each `sub_category` per year.
@@ -54,7 +53,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 6️⃣ Best-Selling Products by Quantity Sold
+### 6. Best-Selling Products by Quantity Sold
 - **Objective:** Identify the top 10 products by units sold.
 - **Query Highlights:**
   - Aggregates total `quantity` sold per `product_id`.
@@ -63,7 +62,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 7️⃣ Region-Wise Revenue Contribution
+### 7. Region-Wise Revenue Contribution
 - **Objective:** Analyze revenue distribution across different regions.
 - **Query Highlights:**
   - Calculates total revenue per `region` by summing `(sale_price * quantity)`.
@@ -72,7 +71,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 8️⃣ Effect of Discounts on Sales Volume
+### 8. Effect of Discounts on Sales Volume
 - **Objective:** Examine how discounts impact order volume.
 - **Query Highlights:**
   - Groups data by `discount` and calculates total `order_id` count and `quantity` sold.
@@ -81,7 +80,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 9️⃣ Fastest & Slowest Shipping Modes
+### 9. Fastest & Slowest Shipping Modes
 - **Objective:** Determine the shipping modes with the quickest and slowest delivery times.
 - **Query Highlights:**
   - Calculates `DATEDIFF(CURDATE(), order_date)` for each `ship_mode`.
@@ -90,7 +89,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-### 🔟 Customer Segmentation by Spending Behavior
+### 10. Customer Segmentation by Spending Behavior
 - **Objective:** Categorize customers based on their total spending.
 - **Query Highlights:**
   - Groups orders by `segment` and calculates total spending per order.
@@ -102,7 +101,7 @@ This project presents an in-depth analysis of an e-commerce dataset (`df_orders`
 
 ---
 
-## 🚀 Conclusion
+## Conclusion
 This SQL-powered analysis provides valuable insights into sales performance, customer behavior, and business growth opportunities. The queries can be used to:
 ✔ Optimize **inventory management**  
 ✔ Enhance **regional sales strategies**  
